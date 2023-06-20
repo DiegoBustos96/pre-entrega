@@ -1,17 +1,10 @@
-import {useState, useEffect} from "react";
+import {useState} from "react";
  
 const Contador = ({stock, inicial}) => {
     const[contador, setContador]= useState(inicial);
-    const[color, setColor]= useState("black");
+    
 
-    useEffect( ()=>{
-        document.title=`Contador: ${contador}`
-        if(contador > 5){
-            setColor("red");
-        }else{
-            setColor("black");
-        }
-    },[contador])
+    
 
     const aumentarContador = ()=> {
         if (contador < stock){
